@@ -1,0 +1,15 @@
+load("@build_bazel_rules_ios//rules:framework.bzl", "apple_framework")
+
+apple_framework(
+    name = "BazelSampleError",
+    module_name = "BazelSampleError",
+    data = glob([
+        "Source/*.lproj/*",
+    ]),
+    visibility = ["//visibility:public"],
+    platforms = {"ios": "15.2"},
+    alwayslink = True,
+    link_dynamic = 1,
+    infoplists = [":Info.plist"],
+    bundle_id = "gabija.BazelSampleError",
+)

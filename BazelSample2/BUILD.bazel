@@ -1,0 +1,44 @@
+load("@build_bazel_rules_ios//rules:framework.bzl", "apple_framework")
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
+
+apple_framework(
+    name = "BazelSample2",
+    module_name = "BazelSample2",
+    data = glob([
+        "Source/*.lproj/*",
+    ]),
+    deps = [
+        "//BazelSampleError:BazelSampleError"
+    ],
+    visibility = ["//visibility:public"],
+    platforms = {"ios": "15.2"},
+    alwayslink = True,
+    link_dynamic = 1,
+    infoplists = [":Info.plist"],
+    bundle_id = "gabija.BazelSample2",
+)
+
+apple_framework(
+    name = "BazelSample2Tests",
+    module_name = "BazelSample2Tests",
+    data = glob([
+        "Tests/*.swift",
+    ]),
+    deps = [
+        ":BazelSample2"
+    ],
+    platforms = {"ios": "15.2"},
+    visibility = ["//visibility:public"],
+    link_dynamic = 1,
+    infoplists = [":Info.plist"],
+    bundle_id = "gabija.BazelSample2",
+)
+
+ios_unit_test(
+    name = "BazelSample2UnitTests",
+    minimum_os_version = "15.2",
+    deps = [
+        ":BazelSample2Tests",
+    ],
+    platform_type = "ios",
+)

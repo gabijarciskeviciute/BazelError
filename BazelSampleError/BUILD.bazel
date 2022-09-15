@@ -3,6 +3,9 @@ load("@build_bazel_rules_ios//rules:framework.bzl", "apple_framework")
 apple_framework(
     name = "BazelSampleError",
     module_name = "BazelSampleError",
+    srcs = glob([
+        "Source/*.swift",
+    ]),
     data = glob([
         "Source/*.lproj/*",
     ]),

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		962D699E28D3666D00CDEB7A /* MyBazelSampleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962D699D28D3666D00CDEB7A /* MyBazelSampleError.swift */; };
+		962D69A028D3668C00CDEB7A /* MyBazelSample2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962D699F28D3668C00CDEB7A /* MyBazelSample2.swift */; };
 		96DEC44828D25B3800BB1753 /* BazelSampleError.h in Headers */ = {isa = PBXBuildFile; fileRef = 96DEC43C28D25B3800BB1753 /* BazelSampleError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96DEC45F28D25BB500BB1753 /* BazelSample2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DEC45728D25BB500BB1753 /* BazelSample2.framework */; };
 		96DEC46428D25BB500BB1753 /* BazelSample2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DEC46328D25BB500BB1753 /* BazelSample2Tests.swift */; };
@@ -29,6 +31,8 @@
 		962D699128D2607900CDEB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962D699428D264B700CDEB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		962D699728D2670500CDEB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		962D699D28D3666D00CDEB7A /* MyBazelSampleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBazelSampleError.swift; sourceTree = "<group>"; };
+		962D699F28D3668C00CDEB7A /* MyBazelSample2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBazelSample2.swift; sourceTree = "<group>"; };
 		96DEC43928D25B3800BB1753 /* BazelSampleError.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BazelSampleError.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DEC43C28D25B3800BB1753 /* BazelSampleError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BazelSampleError.h; sourceTree = "<group>"; };
 		96DEC45728D25BB500BB1753 /* BazelSample2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BazelSample2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +102,7 @@
 			children = (
 				96DEC43C28D25B3800BB1753 /* BazelSampleError.h */,
 				96DEC47128D25C0C00BB1753 /* Localizable.strings */,
+				962D699D28D3666D00CDEB7A /* MyBazelSampleError.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			children = (
 				96DEC45928D25BB500BB1753 /* BazelSample2.h */,
 				96DEC47628D25C2400BB1753 /* Localizable.strings */,
+				962D699F28D3668C00CDEB7A /* MyBazelSample2.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -218,9 +224,11 @@
 				TargetAttributes = {
 					96DEC43828D25B3800BB1753 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					96DEC45628D25BB500BB1753 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					96DEC45D28D25BB500BB1753 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -278,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962D699E28D3666D00CDEB7A /* MyBazelSampleError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962D69A028D3668C00CDEB7A /* MyBazelSample2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +459,7 @@
 		96DEC44C28D25B3800BB1753 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -470,6 +481,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,6 +490,7 @@
 		96DEC44D28D25B3800BB1753 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -507,6 +520,7 @@
 		96DEC46728D25BB500BB1753 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -528,6 +542,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -536,6 +551,7 @@
 		96DEC46828D25BB500BB1753 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -565,6 +581,7 @@
 		96DEC46A28D25BB500BB1753 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q4826V384Z;
@@ -582,6 +599,7 @@
 		96DEC46B28D25BB500BB1753 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q4826V384Z;

@@ -4,6 +4,9 @@ load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
 apple_framework(
     name = "BazelSample2",
     module_name = "BazelSample2",
+    srcs = glob([
+        "Source/*.swift",
+    ]),
     data = glob([
         "Source/*.lproj/*",
     ]),

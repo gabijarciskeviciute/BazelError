@@ -24,7 +24,7 @@ apple_framework(
 apple_framework(
     name = "BazelSample2Tests",
     module_name = "BazelSample2Tests",
-    data = glob([
+    srcs = glob([
         "Tests/*.swift",
     ]),
     deps = [

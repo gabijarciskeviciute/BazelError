@@ -7,8 +7,12 @@
 
 import Foundation
 
-class MyBazelSampleError {
-    func helloBazelSampleError() {
+public class MyBazelSampleError1 {
+    
+    public init(){
+    }
+    
+    public func helloBazelSampleError1() {
         print("Hello, BazelSampleError!")
     }
 }

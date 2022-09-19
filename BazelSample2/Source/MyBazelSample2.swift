@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import BazelSampleError
 
-class MyBazelSampleError {
+public class MyBazelSampleError {
     func helloBazelSampleError() {
         print("Hello, BazelSample2!")
     }

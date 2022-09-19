@@ -1,4 +1,10 @@
 load("@build_bazel_rules_ios//rules:framework.bzl", "apple_framework")
+load("@build_bazel_rules_apple//apple:resources.bzl", "apple_resource_group")
+
+apple_resource_group(
+    name = "ResGroup",
+    structured_resources = glob(["Source/*.lproj/*"]),
+)
 
 apple_framework(
     name = "BazelSampleError",
@@ -7,7 +13,7 @@ apple_framework(
         "Source/*.swift",
     ]),
     data = glob([
-        "Source/*.lproj/*",
+        ":ResGroup",
     ]),
     visibility = ["//visibility:public"],
     platforms = {"ios": "15.2"},

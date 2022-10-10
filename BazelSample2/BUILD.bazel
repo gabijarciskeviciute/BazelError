@@ -40,6 +40,9 @@ apple_framework(
 ios_unit_test(
     name = "BazelSample2UnitTests",
     minimum_os_version = "15.2",
+    frameworks = [
+        ":BazelSample2Tests",
+    ],
     deps = [
         ":BazelSample2Tests",
     ],
